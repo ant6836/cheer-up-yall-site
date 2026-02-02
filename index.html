@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheer Up Y'all</title>
+    <meta name="description" content="Cheer Up Y'all - Your daily dose of encouragement and positivity. Get personalized messages based on your emotions.">
+    <meta name="keywords" content="encouragement, motivation, positivity, mental wellness, daily inspiration">
+    <title>Cheer Up Y'all - Daily Encouragement & Positivity</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,6 +14,7 @@
         <nav class="tab-nav">
             <button class="tab-btn active" data-tab="home">Home</button>
             <button class="tab-btn" data-tab="emotion">Emotion Cheer</button>
+            <button class="tab-btn" data-tab="about">About</button>
         </nav>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
             <span class="theme-icon">🌙</span>
@@ -23,9 +26,42 @@
         <!-- Home Tab -->
         <section id="home-tab" class="tab-content active">
             <div class="hero-section">
-                <h2>Today's Cheer</h2>
-                <p id="cheer-message" class="cheer-message"></p>
-                <button id="new-cheer-btn" class="btn">New Cheer</button>
+                <div class="fixed-quote">
+                    <p class="quote-text">"Every day may not be good, but there's something good in every day."</p>
+                    <p class="quote-author">— Alice Morse Earle</p>
+                </div>
+
+                <div class="welcome-message">
+                    <h2>Welcome to Your Safe Space</h2>
+                    <p>Life can be challenging, but you don't have to face it alone. We're here to remind you of your strength, your worth, and the beauty that exists in every moment. Take a deep breath, and let us share some positivity with you today.</p>
+                </div>
+
+                <div class="daily-cheer">
+                    <h3>✨ Today's Cheer ✨</h3>
+                    <p id="cheer-message" class="cheer-message"></p>
+                    <button id="new-cheer-btn" class="btn">Get New Cheer</button>
+                </div>
+
+                <div class="features-preview">
+                    <h3>What We Offer</h3>
+                    <div class="feature-cards">
+                        <div class="feature-card">
+                            <span class="feature-icon">💝</span>
+                            <h4>Daily Encouragement</h4>
+                            <p>Start each day with uplifting messages that inspire hope and positivity.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🎯</span>
+                            <h4>Emotion-Based Support</h4>
+                            <p>Get personalized messages tailored to exactly how you're feeling right now.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🌈</span>
+                            <h4>500+ Unique Messages</h4>
+                            <p>Our carefully curated collection covers 9 different emotional states.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -33,7 +69,7 @@
         <section id="emotion-tab" class="tab-content">
             <div class="emotion-section">
                 <h2>Get Your Personalized Cheer</h2>
-                <p class="section-description">Tell us how you're feeling, and we'll cheer you up!</p>
+                <p class="section-description">We understand that emotions are complex. Select how you're feeling right now, and we'll share words of encouragement specifically chosen for your current emotional state.</p>
 
                 <div class="emotion-selector">
                     <label>How are you feeling today?</label>
@@ -49,12 +85,75 @@
                         <button id="another-cheer-btn" class="btn btn-secondary">Another Cheer</button>
                     </div>
                 </div>
+
+                <div class="emotion-info">
+                    <h3>Why Emotional Awareness Matters</h3>
+                    <p>Recognizing and acknowledging your emotions is the first step toward emotional wellness. By identifying how you feel, you create space for self-compassion and healing. Our messages are designed to validate your feelings while gently encouraging you toward a more positive mindset.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Tab -->
+        <section id="about-tab" class="tab-content">
+            <div class="about-section">
+                <h2>About Cheer Up Y'all</h2>
+
+                <div class="about-content">
+                    <div class="about-block">
+                        <h3>🌟 Our Mission</h3>
+                        <p>Cheer Up Y'all was created with a simple but powerful mission: to spread positivity and encouragement to anyone who needs it. In a world that can sometimes feel overwhelming, we believe everyone deserves a moment of comfort and inspiration.</p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>💡 What Makes Us Different</h3>
+                        <p>Unlike generic motivation apps, we focus on emotional intelligence. Our 500+ carefully crafted messages are categorized by 9 distinct emotional states, ensuring you receive support that truly resonates with how you're feeling. Each message is written with empathy, understanding, and genuine care.</p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>🎯 How to Use This Site</h3>
+                        <ul class="about-list">
+                            <li><strong>Daily Cheer:</strong> Visit our home page for a random uplifting message to brighten your day.</li>
+                            <li><strong>Emotion-Based Support:</strong> Navigate to "Emotion Cheer" to select your current emotional state and receive personalized encouragement.</li>
+                            <li><strong>Dark Mode:</strong> Use the theme toggle for comfortable viewing at any time of day.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>❤️ Our Promise</h3>
+                        <p>We promise to always provide genuine, heartfelt encouragement. No gimmicks, no hidden agendas—just pure positivity when you need it most. Your emotional wellbeing matters to us, and we're honored to be part of your journey toward a more positive mindset.</p>
+                    </div>
+
+                    <div class="about-block">
+                        <h3>📊 Our Content</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Unique Messages</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">9</span>
+                                <span class="stat-label">Emotion Categories</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Available</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>Made with ❤️ to cheer you up</p>
+        <div class="footer-content">
+            <p class="footer-tagline">"You are braver than you believe, stronger than you seem, and smarter than you think." — A.A. Milne</p>
+            <p class="footer-copyright">© 2024 Cheer Up Y'all. Spreading positivity, one message at a time.</p>
+        </div>
     </footer>
 
     <script src="main.js"></script>
