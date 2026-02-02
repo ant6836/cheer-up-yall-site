@@ -14,7 +14,9 @@
         <nav class="tab-nav">
             <button class="tab-btn active" data-tab="home">Home</button>
             <button class="tab-btn" data-tab="emotion">Emotion Cheer</button>
+            <button class="tab-btn" data-tab="wellness">Wellness Tips</button>
             <button class="tab-btn" data-tab="about">About</button>
+            <button class="tab-btn" data-tab="contact">Contact</button>
         </nav>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
             <span class="theme-icon">🌙</span>
@@ -114,6 +116,7 @@
                         <ul class="about-list">
                             <li><strong>Daily Cheer:</strong> Visit our home page for a random uplifting message to brighten your day.</li>
                             <li><strong>Emotion-Based Support:</strong> Navigate to "Emotion Cheer" to select your current emotional state and receive personalized encouragement.</li>
+                            <li><strong>Wellness Tips:</strong> Explore our comprehensive guides on understanding and managing different emotions.</li>
                             <li><strong>Dark Mode:</strong> Use the theme toggle for comfortable viewing at any time of day.</li>
                         </ul>
                     </div>
@@ -147,11 +150,280 @@
                 </div>
             </div>
         </section>
+
+        <!-- Wellness Tips Tab -->
+        <section id="wellness-tab" class="tab-content">
+            <div class="wellness-section">
+                <h2>Wellness Tips & Emotional Guidance</h2>
+                <p class="section-description">Understanding your emotions is the first step toward emotional wellness. Explore our comprehensive guides for each emotional state, featuring practical tips, coping strategies, and insights from psychology.</p>
+
+                <div class="wellness-grid">
+                    <!-- Sadness -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😢</span>
+                            <h3>Understanding Sadness</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Sadness is a natural human emotion that serves an important purpose. It signals that something meaningful has been lost or that we need support.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Allow yourself to feel:</strong> Suppressing sadness often prolongs it. Give yourself permission to grieve.</li>
+                                <li><strong>Express your emotions:</strong> Talk to someone you trust, write in a journal, or express through art.</li>
+                                <li><strong>Practice self-compassion:</strong> Treat yourself with the same kindness you'd offer a friend.</li>
+                                <li><strong>Maintain routines:</strong> Basic self-care like eating well and sleeping helps your body cope.</li>
+                                <li><strong>Seek connection:</strong> Isolation can deepen sadness. Reach out, even when it's hard.</li>
+                            </ul>
+                            <p class="wellness-note">If sadness persists for more than two weeks or significantly impacts daily life, consider speaking with a mental health professional.</p>
+                        </div>
+                    </article>
+
+                    <!-- Anxiety -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😰</span>
+                            <h3>Managing Anxiety</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Anxiety is your body's natural response to perceived threats. While uncomfortable, it's designed to protect you. The key is learning to manage it when it becomes overwhelming.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Deep breathing:</strong> Try the 4-7-8 technique: inhale for 4 seconds, hold for 7, exhale for 8.</li>
+                                <li><strong>Grounding exercises:</strong> Use the 5-4-3-2-1 method: notice 5 things you see, 4 you hear, 3 you touch, 2 you smell, 1 you taste.</li>
+                                <li><strong>Challenge anxious thoughts:</strong> Ask yourself: "Is this thought based on facts? What evidence do I have?"</li>
+                                <li><strong>Limit caffeine and alcohol:</strong> Both can increase anxiety symptoms.</li>
+                                <li><strong>Regular exercise:</strong> Physical activity is one of the most effective anxiety reducers.</li>
+                            </ul>
+                            <p class="wellness-note">Anxiety disorders are highly treatable. If anxiety is interfering with your daily life, professional help can make a significant difference.</p>
+                        </div>
+                    </article>
+
+                    <!-- Tiredness -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😴</span>
+                            <h3>Combating Fatigue</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Fatigue can be physical, mental, or emotional. Understanding its source helps you address it effectively. In our always-on culture, rest is often undervalued.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Prioritize sleep hygiene:</strong> Maintain consistent sleep times, limit screens before bed, keep your room cool and dark.</li>
+                                <li><strong>Take strategic breaks:</strong> Short breaks every 90 minutes can boost productivity and energy.</li>
+                                <li><strong>Stay hydrated:</strong> Dehydration is a common cause of fatigue that's easily fixed.</li>
+                                <li><strong>Move your body:</strong> Light exercise can actually increase energy levels.</li>
+                                <li><strong>Set boundaries:</strong> Learn to say no to protect your energy for what matters most.</li>
+                            </ul>
+                            <p class="wellness-note">Persistent fatigue can sometimes indicate underlying health issues. If rest doesn't help, consult a healthcare provider.</p>
+                        </div>
+                    </article>
+
+                    <!-- Anger -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😤</span>
+                            <h3>Processing Anger</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Anger is a valid emotion that signals our boundaries have been crossed or something is unjust. The goal isn't to eliminate anger, but to express it constructively.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Pause before responding:</strong> The classic "count to ten" advice works. Create space between stimulus and response.</li>
+                                <li><strong>Physical release:</strong> Exercise, squeeze a stress ball, or do something physical to release the energy.</li>
+                                <li><strong>Use "I" statements:</strong> Instead of "You made me angry," try "I feel frustrated when..."</li>
+                                <li><strong>Identify the root cause:</strong> Anger often masks deeper emotions like hurt, fear, or disappointment.</li>
+                                <li><strong>Practice forgiveness:</strong> Holding onto anger hurts you more than anyone else.</li>
+                            </ul>
+                            <p class="wellness-note">If you find anger controlling your life or leading to destructive behaviors, anger management therapy can provide valuable tools.</p>
+                        </div>
+                    </article>
+
+                    <!-- Loneliness -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">🥺</span>
+                            <h3>Overcoming Loneliness</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Loneliness is about the quality of connections, not quantity. You can feel lonely in a crowd or content alone. It's a signal that your social needs aren't being met.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Reach out first:</strong> Don't wait for others. Send that text, make that call.</li>
+                                <li><strong>Quality over quantity:</strong> Focus on deepening existing relationships rather than having many superficial ones.</li>
+                                <li><strong>Join communities:</strong> Find groups that share your interests—online or in person.</li>
+                                <li><strong>Volunteer:</strong> Helping others creates connection and gives purpose.</li>
+                                <li><strong>Befriend yourself:</strong> Learn to enjoy your own company. Take yourself on dates.</li>
+                            </ul>
+                            <p class="wellness-note">Chronic loneliness can impact health as significantly as smoking. If you're struggling, reaching out to a therapist can help you build connection skills.</p>
+                        </div>
+                    </article>
+
+                    <!-- Stress -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😫</span>
+                            <h3>Reducing Stress</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Stress is your body's response to demands and challenges. Short-term stress can be motivating, but chronic stress takes a serious toll on health and wellbeing.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Identify stressors:</strong> Keep a stress journal to recognize patterns and triggers.</li>
+                                <li><strong>Time management:</strong> Break tasks into smaller steps. Use tools like the Eisenhower Matrix to prioritize.</li>
+                                <li><strong>Learn to delegate:</strong> You don't have to do everything yourself.</li>
+                                <li><strong>Practice relaxation:</strong> Meditation, yoga, deep breathing—find what works for you.</li>
+                                <li><strong>Set realistic expectations:</strong> Perfectionism is a major stress contributor.</li>
+                            </ul>
+                            <p class="wellness-note">Chronic stress can lead to burnout and health problems. If you're constantly overwhelmed, consider speaking with a professional about stress management strategies.</p>
+                        </div>
+                    </article>
+
+                    <!-- Unmotivated -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😔</span>
+                            <h3>Finding Motivation</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Motivation fluctuates naturally. Waiting to "feel motivated" often doesn't work—action frequently precedes motivation, not the other way around.</p>
+                            <h4>Coping Strategies:</h4>
+                            <ul>
+                                <li><strong>Start tiny:</strong> Commit to just 5 minutes. Often, starting is the hardest part.</li>
+                                <li><strong>Remove friction:</strong> Make the desired behavior as easy as possible to start.</li>
+                                <li><strong>Connect to your "why":</strong> Remind yourself why this matters to you.</li>
+                                <li><strong>Build habits:</strong> Rely on systems rather than willpower.</li>
+                                <li><strong>Celebrate small wins:</strong> Acknowledge progress, no matter how small.</li>
+                            </ul>
+                            <p class="wellness-note">Persistent lack of motivation can sometimes indicate depression. If you've lost interest in activities you once enjoyed, consider speaking with a healthcare provider.</p>
+                        </div>
+                    </article>
+
+                    <!-- Happy -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">😊</span>
+                            <h3>Cultivating Happiness</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Happiness isn't a constant state but a skill that can be developed. Research shows that about 40% of our happiness is within our control through intentional activities.</p>
+                            <h4>Strategies to Increase Happiness:</h4>
+                            <ul>
+                                <li><strong>Practice gratitude:</strong> Regularly noting what you're thankful for rewires your brain for positivity.</li>
+                                <li><strong>Nurture relationships:</strong> Strong social connections are the biggest predictor of happiness.</li>
+                                <li><strong>Experience over things:</strong> Spending on experiences creates more lasting joy than material purchases.</li>
+                                <li><strong>Help others:</strong> Acts of kindness boost your own happiness.</li>
+                                <li><strong>Savor good moments:</strong> Pause to fully appreciate positive experiences.</li>
+                            </ul>
+                            <p class="wellness-note">Happiness research shows that beyond basic needs being met, more money doesn't significantly increase happiness. Focus on what truly matters to you.</p>
+                        </div>
+                    </article>
+
+                    <!-- Grateful -->
+                    <article class="wellness-card">
+                        <div class="wellness-card-header">
+                            <span class="wellness-icon">🙏</span>
+                            <h3>Practicing Gratitude</h3>
+                        </div>
+                        <div class="wellness-card-content">
+                            <p>Gratitude is more than saying "thank you"—it's a mindset that shifts focus from what's lacking to what's present. Regular practice has been scientifically shown to improve wellbeing.</p>
+                            <h4>Gratitude Practices:</h4>
+                            <ul>
+                                <li><strong>Keep a gratitude journal:</strong> Write 3 things you're grateful for each day. Be specific.</li>
+                                <li><strong>Write gratitude letters:</strong> Tell people what they mean to you. You don't even have to send them.</li>
+                                <li><strong>Mental subtraction:</strong> Imagine your life without something good to appreciate it more.</li>
+                                <li><strong>Gratitude meditation:</strong> Focus on feelings of thankfulness during meditation.</li>
+                                <li><strong>Share gratitude at meals:</strong> Make it a family or personal ritual.</li>
+                            </ul>
+                            <p class="wellness-note">Studies show that gratitude practice can improve sleep, reduce depression, and even strengthen the immune system. It's one of the most researched wellbeing interventions.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="wellness-resources">
+                    <h3>Additional Resources</h3>
+                    <p>If you're seeking more support, these organizations offer professional help:</p>
+                    <ul>
+                        <li><strong>National Suicide Prevention Lifeline:</strong> 988 (US)</li>
+                        <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+                        <li><strong>SAMHSA National Helpline:</strong> 1-800-662-4357</li>
+                        <li><strong>International Association for Suicide Prevention:</strong> <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener">Find a crisis center</a></li>
+                    </ul>
+                    <p class="wellness-disclaimer">Remember: Our content is for informational purposes only and is not a substitute for professional mental health care.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Tab -->
+        <section id="contact-tab" class="tab-content">
+            <div class="contact-section">
+                <h2>Get in Touch</h2>
+                <p class="section-description">Have feedback, suggestions, or just want to say hello? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+
+                <div class="contact-container">
+                    <form action="https://formspree.io/f/xwpkgpvn" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name (Optional)</label>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic...</option>
+                                <option value="feedback">General Feedback</option>
+                                <option value="suggestion">Feature Suggestion</option>
+                                <option value="bug">Report an Issue</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us what's on your mind..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <div class="contact-info-card">
+                            <h3>💬 We Value Your Input</h3>
+                            <p>Your feedback helps us improve Cheer Up Y'all. Whether it's a new feature idea, a message that resonated with you, or constructive criticism—we want to hear it all.</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <h3>⏰ Response Time</h3>
+                            <p>We typically respond within 1-2 business days. Please note that we cannot provide mental health advice or crisis support through this form.</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <h3>🚨 Need Immediate Help?</h3>
+                            <p>If you're in crisis, please contact:</p>
+                            <ul>
+                                <li>Emergency: 911</li>
+                                <li>Suicide Prevention: 988</li>
+                                <li>Crisis Text: HOME to 741741</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-content">
             <p class="footer-tagline">"You are braver than you believe, stronger than you seem, and smarter than you think." — A.A. Milne</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
             <p class="footer-copyright">© 2024 Cheer Up Y'all. Spreading positivity, one message at a time.</p>
         </div>
     </footer>
