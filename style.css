@@ -1,52 +1,141 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     transition: background-color 0.3s, color 0.3s;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
 }
 
 body.dark-mode {
     background-color: #1a1a2e;
 }
 
-.container {
+/* Header */
+.site-header {
+    background-color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+body.dark-mode .site-header {
+    background-color: #16213e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.site-title {
+    color: #333;
+    font-size: 1.8em;
+    text-align: center;
+    flex: 1;
+}
+
+body.dark-mode .site-title {
+    color: #eee;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f0f2f5;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #0f3460;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.05);
+}
+
+.theme-icon {
+    font-size: 1.2em;
+}
+
+.theme-text {
+    color: #333;
+    font-weight: 500;
+}
+
+body.dark-mode .theme-text {
+    color: #eee;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+/* Sections */
+.cheer-section,
+.lotto-section {
     text-align: center;
     background-color: #fff;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
 }
 
-body.dark-mode .container {
+body.dark-mode .cheer-section,
+body.dark-mode .lotto-section {
     background-color: #16213e;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-h1 {
+.cheer-section h2,
+.lotto-section h2 {
     color: #333;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    font-size: 1.5em;
 }
 
-body.dark-mode h1 {
+body.dark-mode .cheer-section h2,
+body.dark-mode .lotto-section h2 {
     color: #eee;
 }
 
-.lotto-numbers {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
+/* Cheer Message */
+.cheer-message {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 25px;
     min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    line-height: 1.5;
 }
 
-#generate-btn {
+body.dark-mode .cheer-message {
+    color: #ccc;
+}
+
+/* Buttons */
+.btn {
     background-color: #4CAF50;
     color: white;
     padding: 15px 30px;
@@ -57,39 +146,27 @@ body.dark-mode h1 {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-#generate-btn:hover {
+.btn:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
 
-body.dark-mode #generate-btn {
+body.dark-mode .btn {
     background-color: #0f4c75;
 }
 
-body.dark-mode #generate-btn:hover {
+body.dark-mode .btn:hover {
     background-color: #3282b8;
 }
 
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 1.8em;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.2);
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode .theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+/* Lotto Numbers */
+.lotto-numbers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    min-height: 60px;
 }
 
 lotto-ball {
@@ -103,4 +180,32 @@ lotto-ball {
     font-size: 1.5em;
     font-weight: bold;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .site-title {
+        font-size: 1.5em;
+    }
+
+    .cheer-section,
+    .lotto-section {
+        padding: 25px;
+    }
+
+    .cheer-message {
+        font-size: 1.2em;
+    }
+
+    lotto-ball {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
 }

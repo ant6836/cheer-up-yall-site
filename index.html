@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Cheer Up Y'all</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <div id="lotto-numbers" class="lotto-numbers"></div>
-        <button id="generate-btn">Generate Numbers</button>
-    </div>
+    <header class="site-header">
+        <h1 class="site-title">Cheer Up Y'all</h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-text">Dark Mode</span>
+        </button>
+    </header>
+
+    <main class="main-content">
+        <section class="cheer-section">
+            <h2>Today's Cheer</h2>
+            <p id="cheer-message" class="cheer-message"></p>
+            <button id="new-cheer-btn" class="btn">New Cheer</button>
+        </section>
+
+        <section class="lotto-section">
+            <h2>Lucky Numbers</h2>
+            <div id="lotto-numbers" class="lotto-numbers"></div>
+            <button id="generate-btn" class="btn">Generate Numbers</button>
+        </section>
+    </main>
+
     <script src="main.js"></script>
 </body>
 </html>

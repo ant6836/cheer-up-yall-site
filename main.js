@@ -1,3 +1,41 @@
+// Cheer messages
+const cheerMessages = [
+    "You're doing amazing! Keep going! 💪",
+    "Today is your day to shine! ✨",
+    "Believe in yourself, you've got this! 🌟",
+    "Every step forward is progress! 🚀",
+    "You are stronger than you think! 💖",
+    "Good things are coming your way! 🌈",
+    "Your potential is limitless! 🔥",
+    "Take a deep breath, you're doing great! 🌸",
+    "Challenges make you stronger! 💎",
+    "You are worthy of all good things! 🌻",
+    "Keep smiling, it suits you! 😊",
+    "The best is yet to come! 🎉",
+    "You make the world a better place! 🌍",
+    "Trust the process, trust yourself! 🦋",
+    "You are loved and appreciated! ❤️"
+];
+
+function getRandomCheer() {
+    const randomIndex = Math.floor(Math.random() * cheerMessages.length);
+    return cheerMessages[randomIndex];
+}
+
+// Display initial cheer message
+const cheerMessageEl = document.getElementById('cheer-message');
+cheerMessageEl.textContent = getRandomCheer();
+
+// New cheer button
+document.getElementById('new-cheer-btn').addEventListener('click', () => {
+    cheerMessageEl.style.opacity = '0';
+    setTimeout(() => {
+        cheerMessageEl.textContent = getRandomCheer();
+        cheerMessageEl.style.opacity = '1';
+    }, 300);
+});
+
+// Lotto Ball Component
 class LottoBall extends HTMLElement {
     constructor() {
         super();
@@ -55,6 +93,7 @@ class LottoBall extends HTMLElement {
 
 customElements.define('lotto-ball', LottoBall);
 
+// Generate lotto numbers
 document.getElementById('generate-btn').addEventListener('click', () => {
     const lottoNumbersContainer = document.getElementById('lotto-numbers');
     lottoNumbersContainer.innerHTML = '';
@@ -76,17 +115,24 @@ document.getElementById('generate-btn').addEventListener('click', () => {
 
 // Theme toggle functionality
 const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('.theme-icon');
+const themeText = themeToggle.querySelector('.theme-text');
 const body = document.body;
+
+function updateThemeButton(isDark) {
+    themeIcon.textContent = isDark ? '☀️' : '🌙';
+    themeText.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+}
 
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     body.classList.add('dark-mode');
-    themeToggle.textContent = '☀️';
+    updateThemeButton(true);
 }
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     const isDark = body.classList.contains('dark-mode');
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    updateThemeButton(isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
