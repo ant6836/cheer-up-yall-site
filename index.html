@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cheer Up Y'all - Your daily dose of encouragement and positivity. Get personalized messages based on your emotions.">
     <meta name="keywords" content="encouragement, motivation, positivity, mental wellness, daily inspiration">
     <meta name="google-adsense-account" content="ca-pub-9390240382345822">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cheer Up Y'all - Daily Encouragement & Positivity">
+    <meta property="og:description" content="Get personalized encouragement based on your emotions. 500+ unique messages across 9 emotional states.">
+    <meta property="og:image" content="https://ant6836.github.io/cheer-up-yall-site/og-image.png">
+    <meta property="og:url" content="https://ant6836.github.io/cheer-up-yall-site/">
+    <meta property="og:site_name" content="Cheer Up Y'all">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cheer Up Y'all - Daily Encouragement & Positivity">
+    <meta name="twitter:description" content="Get personalized encouragement based on your emotions. 500+ unique messages across 9 emotional states.">
+    <meta name="twitter:image" content="https://ant6836.github.io/cheer-up-yall-site/og-image.png">
+
     <title>Cheer Up Y'all - Daily Encouragement & Positivity</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9390240382345822" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -20,10 +38,16 @@
             <button class="tab-btn" data-tab="about">About</button>
             <button class="tab-btn" data-tab="contact">Contact</button>
         </nav>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <span class="theme-icon">🌙</span>
-            <span class="theme-text">Dark Mode</span>
-        </button>
+        <div class="header-controls">
+            <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">
+                <span class="lang-icon">🌐</span>
+                <span class="lang-text">한국어</span>
+            </button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Dark Mode</span>
+            </button>
+        </div>
     </header>
 
     <main class="main-content">
