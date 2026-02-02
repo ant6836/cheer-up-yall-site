@@ -1,3 +1,7 @@
+* {
+    transition: background-color 0.3s, color 0.3s;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -8,6 +12,10 @@ body {
     margin: 0;
 }
 
+body.dark-mode {
+    background-color: #1a1a2e;
+}
+
 .container {
     text-align: center;
     background-color: #fff;
@@ -16,9 +24,18 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+body.dark-mode .container {
+    background-color: #16213e;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
 h1 {
     color: #333;
     margin-bottom: 30px;
+}
+
+body.dark-mode h1 {
+    color: #eee;
 }
 
 .lotto-numbers {
@@ -26,6 +43,7 @@ h1 {
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
+    min-height: 60px;
 }
 
 #generate-btn {
@@ -42,6 +60,36 @@ h1 {
 #generate-btn:hover {
     background-color: #45a049;
     transform: scale(1.05);
+}
+
+body.dark-mode #generate-btn {
+    background-color: #0f4c75;
+}
+
+body.dark-mode #generate-btn:hover {
+    background-color: #3282b8;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 lotto-ball {
