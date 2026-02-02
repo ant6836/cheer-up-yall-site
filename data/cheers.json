@@ -1,0 +1,151 @@
+{
+  "emotions": {
+    "sad": {
+      "label": "Feeling Sad",
+      "icon": "😢",
+      "messages": [
+        "It's okay to feel sad. Your feelings are valid. 💙",
+        "This sadness won't last forever. Brighter days are coming. 🌅",
+        "Let yourself feel it, then let it go. You're healing. 🌱",
+        "Even on your darkest days, you are not alone. 💜",
+        "Tears water the seeds of your future happiness. 🌸",
+        "It's okay to not be okay sometimes. Take your time. 🤗",
+        "Your sadness shows how deeply you feel. That's beautiful. 💖",
+        "After every storm comes a rainbow. Hold on. 🌈"
+      ]
+    },
+    "anxious": {
+      "label": "Feeling Anxious",
+      "icon": "😰",
+      "messages": [
+        "Take a deep breath. You've survived 100% of your worst days. 🌬️",
+        "Anxiety lies to you. You are capable and strong. 💪",
+        "One step at a time. You don't have to figure it all out today. 👣",
+        "This feeling will pass. You are safe right now. 🛡️",
+        "Breathe in courage, breathe out fear. You've got this. 🧘",
+        "Worrying doesn't take away tomorrow's troubles, only today's peace. ☮️",
+        "You are braver than you believe. Trust yourself. 🦁",
+        "Focus on what you can control. Let go of the rest. 🍃"
+      ]
+    },
+    "tired": {
+      "label": "Feeling Tired",
+      "icon": "😴",
+      "messages": [
+        "Rest is not a luxury, it's a necessity. Take care of yourself. 🛏️",
+        "It's okay to slow down. You're not a machine. 🐢",
+        "Your worth isn't measured by your productivity. Rest up! ☕",
+        "Even the strongest warriors need to rest. Recharge! 🔋",
+        "Taking a break is part of the journey, not giving up. 🌙",
+        "You've been doing so much. It's okay to pause. ⏸️",
+        "Listen to your body. It's asking for rest. 💤",
+        "Tomorrow is a new day with fresh energy waiting for you. 🌅"
+      ]
+    },
+    "angry": {
+      "label": "Feeling Angry",
+      "icon": "😤",
+      "messages": [
+        "Your anger is valid, but don't let it control you. 🔥",
+        "Take a moment. Breathe. You're stronger than this feeling. 💨",
+        "Channel that energy into something positive. You have power! ⚡",
+        "It's okay to feel angry. What matters is what you do next. 🎯",
+        "This too shall pass. Give yourself grace. 🕊️",
+        "Anger shows you care. Now find your peace. ☮️",
+        "Step back, cool down, then respond. You've got wisdom. 🧠",
+        "Your feelings matter, but so does your peace of mind. 🌿"
+      ]
+    },
+    "lonely": {
+      "label": "Feeling Lonely",
+      "icon": "🥺",
+      "messages": [
+        "You are never truly alone. The world needs you. 🌍",
+        "Loneliness is temporary. Connection is coming your way. 🤝",
+        "You matter more than you know. Someone is thinking of you. 💭",
+        "Being alone doesn't mean being lonely. Enjoy your own company. 🌟",
+        "Reach out to someone today. People care about you. 📱",
+        "You are worthy of love and belonging. Always. ❤️",
+        "This feeling will pass. You are seen and valued. 👀",
+        "The right people will find their way to you. Trust the journey. 🛤️"
+      ]
+    },
+    "stressed": {
+      "label": "Feeling Stressed",
+      "icon": "😫",
+      "messages": [
+        "You can handle this. One thing at a time. 📝",
+        "Stress means you care. But remember to breathe. 🌬️",
+        "You've overcome challenges before. You'll overcome this too. 🏔️",
+        "Break it down into smaller pieces. You've got this! 🧩",
+        "It's okay to ask for help. You don't have to do this alone. 🤲",
+        "This stressful moment is not your whole life. Keep perspective. 🔭",
+        "Take a break. Your problems will still be there, but so will you—refreshed! ☕",
+        "You are doing better than you think. Give yourself credit. 🏆"
+      ]
+    },
+    "unmotivated": {
+      "label": "Feeling Unmotivated",
+      "icon": "😔",
+      "messages": [
+        "Start small. Even tiny progress is still progress. 🐣",
+        "You don't need motivation to start. Just take the first step. 👟",
+        "It's okay to have off days. Tomorrow is a fresh start. 🌅",
+        "Remember why you started. Your dreams are worth it. ⭐",
+        "Done is better than perfect. Just begin! 🎬",
+        "Your future self will thank you for not giving up today. 🙏",
+        "Motivation follows action. Move first, feel motivated later. 🏃",
+        "Every expert was once a beginner. Keep going! 📈"
+      ]
+    },
+    "happy": {
+      "label": "Feeling Happy",
+      "icon": "😊",
+      "messages": [
+        "Your joy is contagious! Keep spreading those good vibes! ✨",
+        "Cherish this moment. You deserve all this happiness! 🎉",
+        "Your smile lights up the world. Keep shining! 🌟",
+        "Happiness looks amazing on you! Enjoy every second! 💫",
+        "You've earned this joy. Celebrate yourself! 🥳",
+        "May this happiness multiply and overflow! 🌈",
+        "Your positive energy is a gift to everyone around you! 🎁",
+        "Remember this feeling. You can always come back to it! 💖"
+      ]
+    },
+    "grateful": {
+      "label": "Feeling Grateful",
+      "icon": "🙏",
+      "messages": [
+        "Gratitude is the best attitude. You're on the right path! 🛤️",
+        "A grateful heart attracts more blessings. Keep counting them! ✨",
+        "Your appreciation for life is beautiful. Keep that spirit! 🌺",
+        "Gratitude turns what we have into enough. You're wise! 🦉",
+        "Thank you for being you. The world is better with you in it! 🌍",
+        "Your grateful heart is a magnet for miracles! 💫",
+        "Appreciation is the highest form of prayer. Keep it up! 🙌",
+        "Grateful people are happy people. You're proof of that! 😊"
+      ]
+    }
+  },
+  "general": {
+    "label": "General Encouragement",
+    "icon": "💪",
+    "messages": [
+      "You're doing amazing! Keep going! 💪",
+      "Today is your day to shine! ✨",
+      "Believe in yourself, you've got this! 🌟",
+      "Every step forward is progress! 🚀",
+      "You are stronger than you think! 💖",
+      "Good things are coming your way! 🌈",
+      "Your potential is limitless! 🔥",
+      "The best is yet to come! 🎉",
+      "You make the world a better place! 🌍",
+      "Trust the process, trust yourself! 🦋",
+      "You are loved and appreciated! ❤️",
+      "Keep smiling, it suits you! 😊",
+      "You are worthy of all good things! 🌻",
+      "Challenges make you stronger! 💎",
+      "Your journey is unique and valuable! 🗺️"
+    ]
+  }
+}
