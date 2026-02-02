@@ -1,116 +1,140 @@
-// Cheer messages
-const cheerMessages = [
-    "You're doing amazing! Keep going! 💪",
-    "Today is your day to shine! ✨",
-    "Believe in yourself, you've got this! 🌟",
-    "Every step forward is progress! 🚀",
-    "You are stronger than you think! 💖",
-    "Good things are coming your way! 🌈",
-    "Your potential is limitless! 🔥",
-    "Take a deep breath, you're doing great! 🌸",
-    "Challenges make you stronger! 💎",
-    "You are worthy of all good things! 🌻",
-    "Keep smiling, it suits you! 😊",
-    "The best is yet to come! 🎉",
-    "You make the world a better place! 🌍",
-    "Trust the process, trust yourself! 🦋",
-    "You are loved and appreciated! ❤️"
-];
+// Cheer data
+let cheerData = null;
 
-function getRandomCheer() {
-    const randomIndex = Math.floor(Math.random() * cheerMessages.length);
-    return cheerMessages[randomIndex];
+// Load cheer data from JSON file
+async function loadCheerData() {
+    try {
+        const response = await fetch('data/cheers.json');
+        cheerData = await response.json();
+        initializeEmotionButtons();
+        displayGeneralCheer();
+    } catch (error) {
+        console.error('Error loading cheer data:', error);
+        // Fallback messages if JSON fails to load
+        cheerData = {
+            general: {
+                messages: [
+                    "You're doing amazing! Keep going! 💪",
+                    "Today is your day to shine! ✨",
+                    "Believe in yourself, you've got this! 🌟"
+                ]
+            },
+            emotions: {}
+        };
+        displayGeneralCheer();
+    }
 }
 
-// Display initial cheer message
-const cheerMessageEl = document.getElementById('cheer-message');
-cheerMessageEl.textContent = getRandomCheer();
+// Get random message from array
+function getRandomMessage(messages) {
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    return messages[randomIndex];
+}
 
-// New cheer button
+// Display general cheer message on home tab
+function displayGeneralCheer() {
+    const cheerMessageEl = document.getElementById('cheer-message');
+    if (cheerData && cheerData.general) {
+        cheerMessageEl.textContent = getRandomMessage(cheerData.general.messages);
+    }
+}
+
+// Initialize emotion buttons
+function initializeEmotionButtons() {
+    const emotionButtonsContainer = document.getElementById('emotion-buttons');
+    if (!cheerData || !cheerData.emotions) return;
+
+    emotionButtonsContainer.innerHTML = '';
+
+    Object.entries(cheerData.emotions).forEach(([key, emotion]) => {
+        const button = document.createElement('button');
+        button.className = 'emotion-btn';
+        button.dataset.emotion = key;
+        button.innerHTML = `
+            <span class="emotion-icon">${emotion.icon}</span>
+            <span class="emotion-label">${emotion.label}</span>
+        `;
+        button.addEventListener('click', () => selectEmotion(key));
+        emotionButtonsContainer.appendChild(button);
+    });
+}
+
+// Selected emotion
+let selectedEmotion = null;
+
+// Select emotion
+function selectEmotion(emotionKey) {
+    selectedEmotion = emotionKey;
+
+    // Update button states
+    document.querySelectorAll('.emotion-btn').forEach(btn => {
+        btn.classList.remove('selected');
+        if (btn.dataset.emotion === emotionKey) {
+            btn.classList.add('selected');
+        }
+    });
+
+    // Show result
+    showEmotionResult(emotionKey);
+}
+
+// Show emotion result
+function showEmotionResult(emotionKey) {
+    const emotion = cheerData.emotions[emotionKey];
+    const resultContainer = document.getElementById('emotion-result');
+    const resultIcon = document.getElementById('result-icon');
+    const resultMessage = document.getElementById('result-message');
+
+    resultIcon.textContent = emotion.icon;
+    resultMessage.textContent = getRandomMessage(emotion.messages);
+
+    resultContainer.classList.remove('hidden');
+    resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+// Tab navigation
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tabName = button.dataset.tab;
+
+        // Update button states
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Update content visibility
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === `${tabName}-tab`) {
+                content.classList.add('active');
+            }
+        });
+    });
+});
+
+// New cheer button (home tab)
 document.getElementById('new-cheer-btn').addEventListener('click', () => {
+    const cheerMessageEl = document.getElementById('cheer-message');
     cheerMessageEl.style.opacity = '0';
     setTimeout(() => {
-        cheerMessageEl.textContent = getRandomCheer();
+        displayGeneralCheer();
         cheerMessageEl.style.opacity = '1';
     }, 300);
 });
 
-// Lotto Ball Component
-class LottoBall extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+// Another cheer button (emotion tab)
+document.getElementById('another-cheer-btn').addEventListener('click', () => {
+    if (selectedEmotion) {
+        const resultMessage = document.getElementById('result-message');
+        resultMessage.style.opacity = '0';
+        setTimeout(() => {
+            const emotion = cheerData.emotions[selectedEmotion];
+            resultMessage.textContent = getRandomMessage(emotion.messages);
+            resultMessage.style.opacity = '1';
+        }, 300);
     }
-
-    connectedCallback() {
-        this.render();
-    }
-
-    static get observedAttributes() {
-        return ['number'];
-    }
-
-    attributeChangedCallback() {
-        if (this.shadowRoot) {
-            this.render();
-        }
-    }
-
-    render() {
-        const number = this.getAttribute('number');
-        const color = this.getColor(number);
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                .ball {
-                    background-color: ${color};
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: white;
-                    font-size: 1.5em;
-                    font-weight: bold;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                    font-family: 'Arial', sans-serif;
-                }
-            </style>
-            <div class="ball">${number}</div>
-        `;
-    }
-
-    getColor(number) {
-        const num = parseInt(number);
-        if (num <= 10) return '#f44336';
-        if (num <= 20) return '#ff9800';
-        if (num <= 30) return '#ffc107';
-        if (num <= 40) return '#4caf50';
-        return '#2196f3';
-    }
-}
-
-customElements.define('lotto-ball', LottoBall);
-
-// Generate lotto numbers
-document.getElementById('generate-btn').addEventListener('click', () => {
-    const lottoNumbersContainer = document.getElementById('lotto-numbers');
-    lottoNumbersContainer.innerHTML = '';
-    const numbers = new Set();
-
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
-
-    const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
-
-    sortedNumbers.forEach(number => {
-        const lottoBall = document.createElement('lotto-ball');
-        lottoBall.setAttribute('number', number);
-        lottoNumbersContainer.appendChild(lottoBall);
-    });
 });
 
 // Theme toggle functionality
@@ -136,3 +160,6 @@ themeToggle.addEventListener('click', () => {
     updateThemeButton(isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
+
+// Initialize app
+loadCheerData();
