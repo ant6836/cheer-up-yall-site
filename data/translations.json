@@ -214,7 +214,7 @@
     }
   },
   "ko": {
-    "siteTitle": "힘내요 여러분",
+    "siteTitle": "Cheer Up Y'all",
     "nav": {
       "home": "홈",
       "emotion": "감정별 응원",
@@ -231,8 +231,8 @@
       "full": "한국어"
     },
     "home": {
-      "quote": "\"매일이 좋을 수는 없지만, 매일 속에는 좋은 것이 있습니다.\"",
-      "quoteAuthor": "— 앨리스 모스 얼",
+      "quote": "\"Every day may not be good, but there's something good in every day.\"",
+      "quoteAuthor": "— Alice Morse Earle",
       "welcomeTitle": "당신만의 안전한 공간에 오신 것을 환영합니다",
       "welcomeText": "살다 보면 힘든 일이 많지만, 혼자 감당할 필요 없어요. 당신의 강함, 가치, 그리고 매 순간 존재하는 아름다움을 일깨워 드릴게요. 깊게 숨 쉬고, 오늘 저희와 함께 긍정의 힘을 나눠요.",
       "todaysCheer": "오늘의 응원",
@@ -378,9 +378,9 @@
       "gratefulNote": "연구에 따르면 감사 실천이 수면을 개선하고, 우울증을 줄이며, 면역 체계까지 강화할 수 있습니다. 가장 많이 연구된 웰빙 개입 중 하나입니다."
     },
     "about": {
-      "title": "힘내요 여러분 소개",
+      "title": "Cheer Up Y'all 소개",
       "missionTitle": "우리의 미션",
-      "missionText": "힘내요 여러분은 단순하지만 강력한 미션으로 만들어졌습니다: 필요한 모든 사람에게 긍정과 격려를 전하는 것. 때때로 압도적으로 느껴질 수 있는 세상에서 모든 사람은 위로와 영감의 순간을 받을 자격이 있다고 믿습니다.",
+      "missionText": "Cheer Up Y'all은 단순하지만 강력한 미션으로 만들어졌습니다: 필요한 모든 사람에게 긍정과 격려를 전하는 것. 때때로 압도적으로 느껴질 수 있는 세상에서 모든 사람은 위로와 영감의 순간을 받을 자격이 있다고 믿습니다.",
       "differentTitle": "우리가 다른 점",
       "differentText": "일반적인 동기부여 앱과 달리, 저희는 감성 지능에 집중합니다. 500개 이상의 정성스럽게 작성된 메시지는 9가지 뚜렷한 감정 상태로 분류되어, 당신이 느끼는 감정에 진정으로 공감하는 지원을 받을 수 있습니다. 각 메시지는 공감, 이해, 진심 어린 관심으로 작성되었습니다.",
       "howToTitle": "이 사이트 사용법",
@@ -418,11 +418,11 @@
       "messagePlaceholder": "생각을 자유롭게 적어주세요...",
       "submitBtn": "메시지 보내기",
       "valueTitle": "여러분의 의견을 소중히 여깁니다",
-      "valueText": "여러분의 피드백이 힘내요 여러분을 개선하는 데 도움이 됩니다. 새로운 기능 아이디어, 공감되었던 메시지, 건설적인 비판—무엇이든 듣고 싶습니다."
+      "valueText": "여러분의 피드백이 Cheer Up Y'all을 개선하는 데 도움이 됩니다. 새로운 기능 아이디어, 공감되었던 메시지, 건설적인 비판—무엇이든 듣고 싶습니다."
     },
     "footer": {
-      "tagline": "\"당신은 믿는 것보다 더 용감하고, 보이는 것보다 더 강하며, 생각하는 것보다 더 똑똑합니다.\" — A.A. 밀른",
-      "copyright": "힘내요 여러분. 한 메시지씩 긍정을 퍼뜨립니다.",
+      "tagline": "\"You are braver than you believe, stronger than you seem, and smarter than you think.\" — A.A. Milne",
+      "copyright": "Cheer Up Y'all. 한 메시지씩 긍정을 퍼뜨립니다.",
       "privacy": "개인정보처리방침",
       "terms": "이용약관"
     }
